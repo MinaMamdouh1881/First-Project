@@ -1,0 +1,454 @@
+:root {
+    --maincolor: #10cab7;
+    --seccolor: #2c4755;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.parent {
+    background-color: aqua;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* --------------------------------------------------- */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo {
+    width: 60px;
+}
+
+header .container .links {
+    position: relative;
+}
+
+header .container .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+header .container .links .icon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30px;
+    justify-content: flex-end;
+}
+
+header .container .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+header .container .links .icon span:first-child {
+    width: 100%;
+}
+
+header .container .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+header .container .links .icon span:last-child {
+    width: 100%;
+}
+
+header .links ul {
+    list-style: none;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 20px);
+    min-width: 200px;
+    padding: 0;
+    margin: 0;
+    display: none;
+    z-index: 1;
+}
+
+header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+}
+
+header .container .links:hover ul {
+    display: block;
+}
+
+header .links ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: #333;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+header .links ul li a:hover {
+    padding-left: 25px;
+}
+
+header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #eee;
+}
+
+.landing {
+    background-image: url(../IMGs/mountain.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.landing .intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.landing .intro-text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--maincolor);
+}
+
+.landing .intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+    width: 320px;
+    max-width: 100%;
+}
+
+.featchers {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.featchers .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.featchers .container .feat {
+    padding: 20px;
+    text-align: center;
+}
+
+.featchers .container .feat i {
+    color: var(--maincolor);
+}
+
+.featchers .container .feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+.featchers .container .feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+}
+
+.spiceal-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    letter-spacing: -7px;
+    margin-top: 10px;
+}
+
+.spiceal-heading+p {
+    color: #8a867f;
+    text-align: center;
+    font-size: 20px;
+    margin: -110px 0 0;
+}
+
+.services {
+    padding: 60px 0;
+}
+
+.serv-content {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.serv-content .serv {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.serv-content .serv i {
+    color: var(--maincolor);
+    flex-basis: 60px;
+}
+
+.serv-content .serv .serv-text {
+    flex: 1;
+}
+
+.serv-content .serv .serv-text h3 {
+    margin: 0 0 20px;
+}
+
+.serv-content .serv .serv-text p {
+    color: #444;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.serv-content .img {
+    text-align: center;
+    position: relative;
+}
+
+.serv-content .img img {
+    width: 260px;
+}
+
+.serv-content .img::before {
+    content: "";
+    background-color: var(--seccolor);
+    width: 100px;
+    height: calc(100% + 100px);
+    position: absolute;
+    top: -50px;
+    right: 0;
+    z-index: -1;
+}
+
+.portfolio {
+    padding: 60px 0;
+    background-color: #f6f6f6;
+}
+
+.portcont {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portcont .port-contant {
+    background-color: white;
+}
+
+.portcont .port-contant img {
+    width: 100%;
+}
+
+.portcont .port-contant .port-text {
+    padding-left: 20px;
+}
+
+.about {
+    padding: 60px 0;
+}
+
+.about .about-content {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about .about-content .img {
+    position: relative;
+    width: 250px;
+    height: 375px;
+}
+
+.about .about-content .img::before {
+    content: "";
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}
+
+.about .about-content .img::after {
+    content: "";
+    width: 120px;
+    height: 300px;
+    border-left: 80px solid var(--maincolor);
+    border-bottom: 80px solid var(--maincolor);
+    position: absolute;
+    top: -40px;
+    right: -150px;
+    z-index: -1;
+}
+
+.about .about-content .img img {
+    max-width: 100%;
+}
+
+.about .about-content .about-text {
+    flex-basis: calc(100% - 500px);
+}
+
+.about .about-content .about-text p:first-child {
+    line-height: 1.8;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.about .about-content .about-text p:first-child+hr {
+    width: 50%;
+    display: inline-block;
+    border-color: var(--maincolor);
+}
+
+.about .about-content .about-text p:last-child {
+    line-height: 1.8;
+    color: #777;
+}
+
+@media (max-width:991px) {
+    .about .about-content {
+        flex-direction: column;
+    }
+
+    .about .about-content .img {
+        margin: 0 auto 50px;
+    }
+
+    .about .about-content .img::after {
+        width: 50px;
+        right: -60px;
+    }
+}
+
+@media (max-width:767px) {
+    .container {
+        width: 100%;
+    }
+
+    .spiceal-heading {
+        font-size: 70px !important;
+        margin: 0;
+    }
+
+    .spiceal-heading+p {
+        margin: -20px 0 0;
+    }
+
+    .serv-content .serv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width:1199px) {
+    .serv-content .img {
+        display: none;
+    }
+}
+
+.contact {
+    padding: 60px 0 100px;
+    background-color: #f6f6f6;
+}
+
+.contact .contact-content {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.contact .contact-content p:first-child {
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--seccolor);
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.contact .contact-content a:nth-child(2) {
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--maincolor);
+    text-decoration: none;
+}
+
+.contact .contact-content p:last-child i {
+    color: var(--seccolor);
+}
+
+@media (max-width:767px) {
+
+    .contact .contact-content p:first-child,
+    .contact .contact-content a:nth-child(2) {
+        font-size: 25px;
+    }
+}
+footer{
+    background-color: var(--seccolor);
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+footer p span{
+    color: var(--maincolor);
+    font-weight: 800;
+}
